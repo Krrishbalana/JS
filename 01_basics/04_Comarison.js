@@ -10,6 +10,6 @@ console.log("02" > 1);
 
 // prefferd use => "===" this check value as well as the data type while comparison.
 // console.log("2" === 2); // this gives false because conversion will not perform conversion.
-
+// avoid comparison which will create confusion in our program
 
 
