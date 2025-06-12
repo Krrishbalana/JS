@@ -29,3 +29,36 @@ console.log(Id === Id2); // return false
         const myFunction = function(){
             console.log("Hello world");
         }
+
+
+//--------------------------------------------------------------------MEMORY------------------------------------------------------------------------------
+// Stack (premitive type), Heap (non-Premitive type)
+
+//Stack
+let myName = "krish balana";
+
+let anotherName = myName;
+anotherName = "pooopoo";
+
+console.log(anotherName);
+console.log(myName);  // it remains un changed, which means the copy of myName is passed to the another name 
+
+
+//Heap
+let userOne = {
+    email: "krrishbalana@gmail.com",
+    id: "122333"
+}
+
+let userTwo = userOne;
+userTwo.email = "krishbalana09@gmail.com";
+
+console.log(userOne.email); // output => "krishbalana09@gmail.com" because in this case copy pass nahi hoti sidha reference milta h memory mai.
+console.log(userTwo.email);
+
+/*
+=> Jitne bhi premitive datatype h vo jayenge stack k ande or stck mai hume copy milti h orignal value nahi,
+agr hum copy mai kuch changes kre to orignal unchanged reheti hai.
+=> Jitne bhi non-premitive datatype h vo jayenge heap mai or heap mai hume reference milta h,
+age humne value chnge ki to orignal bhi change hogi.
+*/
