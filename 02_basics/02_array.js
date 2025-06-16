@@ -24,5 +24,15 @@ Returns a new array with all sub-array elements concatenated into it recursively
 */
 console.log(real_another_array); // [1, 2, 3, 4, 5, 6, 7, 6, 7, 4, 5]
 
+//usefull
+console.log(Array.isArray("hitesh")); // it will return false because "hitesh" is a string not array
+console.log(Array.from("hitesh")); // convert this sting to array -> [ 'h', 'i', 't', 'e', 's', 'h' ]
+
+
+let S1 = 100;
+let S2 = 200;
+let S3 = 300;
+console.log(Array.of(S1, S2, S3)); // return --> [ 100, 200, 300 ]
+
 
 
