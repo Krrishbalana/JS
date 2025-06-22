@@ -11,5 +11,28 @@ let user = {
 
 user.welcomeMsg();
 user.username = "arul"
-user.welcomeMsg();
+user.welcomeMsg(); 
 
+
+
+function chai() {
+    let username = "krish";
+    console.log(this);
+}
+
+chai();
+
+// arrow functions
+
+//1. normal way to define the function
+const chai2 = function () {
+    let username = "hitesh";
+    console.log(this.username); // shows undefined because it doesn't work like this in functions as they work in objects.
+}
+
+//2. 2nd wany to define the function called arrow functions
+const chai3 = () => {
+    console.log("krish balana");
+}
+
+chai3();
