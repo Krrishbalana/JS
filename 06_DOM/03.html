@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn DOM with me</title>
+    <style>
+        *{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    // lets create a div
+    const div = document.createElement('div');
+    console.log(div);
+    div.className = "main"; // adding class to the div
+    div.id = "myId";
+    div.setAttribute("title", "title_name")
+    div.style.backgroundColor = "green";
+    div.style.padding = "15px";
+    // div.innerText = "Krish Balana, a Web Developer";
+
+    const addText = document.createTextNode("Krish, A Web Developer!");
+    div.appendChild(addText);
+    console.log(div);
+
+    // attach to the HTMl Document
+    document.body.appendChild(div);
+    
+    
+
+
+    
+    
+
+
+</script>
+</html>
