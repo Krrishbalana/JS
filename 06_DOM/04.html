@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM part-3</title>
+    <style>
+        *{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    // const parent = document.querySelector('.language');
+    
+    // const addlang = document.createElement('li'); // create an element
+    // const addText = document.createTextNode("typescript"); // add another language
+    // addlang.append(addText); // text to li mai dala
+
+    // parent.appendChild(addlang); // li to parent mai daal dia
+
+    // lets create a function to add element in the list
+    function addLanguage(langName){
+        const ul = document.querySelector('.language')
+        const listItem = document.createElement('li'); // create a list element
+        const addText = document.createTextNode(langName); // create text node
+        listItem.append(addText) // adding langName to the created list 
+        ul.append(listItem); // add list to the HTML document
+    }
+    
+    addLanguage("python");
+    addLanguage("java");
+    addLanguage("react.js");
+    addLanguage("node.js");
+
+    // lets edit the values of language unordered list
+    const secondLanguage = document.querySelector("li:nth-child(2)");
+    // secondLanguage.innerHTML = 'mojo'; => this is not an optimised approach
+    // secondLanguage.appendChild(document.createTextNode(" mojo"))
+    const newLi = document.createElement("li");
+    // newLi.innerHTML = "mojo"; // this will also okay
+    newLi.appendChild(document.createTextNode("mojo")); // more optimised approach
+    secondLanguage.replaceWith(newLi);
+
+    //replace javascript with c++
+    const firstLanguage = document.querySelector("li:nth-child(1)");
+    const liTwo = document.createElement('li');
+    liTwo.appendChild(document.createTextNode("C++"));
+    firstLanguage.replaceWith(liTwo);
+
+    //remove
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+    
+
+
+</script>
+</html>
