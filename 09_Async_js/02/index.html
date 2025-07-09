@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">My Name is: </h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log("krish", Date.now().toString);
+        
+    // },1000)
+    const time = function(){
+        console.log("krish", new Date().toLocaleTimeString());
+    }
+    // const intervalID = setInterval(time, 1000)
+
+    // clearInterval(intervalID)
+    let startEvent;
+    const start = document.querySelector("#start");
+    const stop = document.querySelector("#stop");
+    start.addEventListener("click", function(){
+        if(!startEvent){
+            startEvent =  setInterval(time, 1000);
+        }
+    })
+
+    stop.addEventListener("click", function(){
+        clearInterval(startEvent);
+        startEvent = 0;
+    })
+
+</script>
+</html>
